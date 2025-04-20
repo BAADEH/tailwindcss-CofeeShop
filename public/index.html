@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
     <link rel="icon" href="images/fav-icon.png" />
     <title>cofee shop</title>
   </head>
-  <body class="font-vazir">
+  <body class="font-vazir bg-cover bg-gray-100 dark:bg-zinc-800">
     <svg class="hidden">
       <symbol
         id="shoping-cart"
@@ -67,27 +67,31 @@
       </symbol>
     </svg>
     <header
-      class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-24 px-10 py-5 mx-auto   bg-black/50 rounded-3xl"
+      class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-24 px-10 py-5 mx-auto bg-black/50 rounded-3xl backdrop-blur-[6px]"
     >
       <!-- logo and meno -->
       <div class="flex justify-between items-center w-full">
-        <nav class="flex gap-x-9">
+        <nav class="flex gap-x-9 h-14">
           <div>
             <img src="images/app-logo.png" alt="cofee logo" />
           </div>
-          <ul class="flex items-center gap-x-9 text-xl text-gray-300">
+          <ul
+            class="flex items-center gap-x-9 text-xl text-gray-300 tracking-1 h-full [&>*]:leading-[56px]"
+          >
             <li>
-              <a href="#" class="text-orange-200">صفحه اصلی</a>
+              <a href="#" class="text-orange-300">صفحه اصلی</a>
             </li>
-            <li>
-              <a href="#">فروشگاه</a>
-              <ul class="hidden">
-                <li><a href="#">قهوه ویژه</a></li>
-                <li><a href="#"> ویژه در سطح جهانی</a></li>
-                <li><a href="#">قهوه درجه یک</a></li>
-                <li><a href="#">ترکیبات تجاری</a></li>
-                <li><a href="#">کپسول قهوه</a></li>
-              </ul>
+            <li class="relative group">
+              <a href="#" class="group-hover:text-orange-300 transition-colors">فروشگاه</a>
+              <div
+                class="absolute top-full opacity-0 invisible group-hover:visible group-hover:opacity-100  w-52 p-6 space-y-4 text-zinc-700 dark:text-white text-base bg-white border-t-[3px] rounded-2xl border-t-orange-300 tracking-1 transition-all shadow-normal dark:bg-zinc-700 [&>*]:inline-block [&>*]:transition-colors [&>*:hover]:text-orange-300"
+              >
+                <a href="#">قهوه ویژه</a>
+                <a href="#"> ویژه در سطح جهانی</a>
+                <a href="#">قهوه درجه یک</a>
+                <a href="#">ترکیبات تجاری</a>
+                <a href="#">کپسول قهوه</a>
+              </div>
             </li>
             <li><a href="#">دیکشنری</a></li>
             <li><a href="#">بلاگ</a></li>
@@ -96,8 +100,8 @@
           </ul>
         </nav>
         <!-- cart & login theme -->
-         
-        <div class="flex items-center gap-x-5 text-xl text-orange-200 ">
+
+        <div class="flex items-center gap-x-5 text-xl text-orange-200">
           <div class="text-orange-200">
             <svg class="w-8 h-8">
               <use xlink:href="#shoping-cart"></use>
@@ -109,10 +113,10 @@
             </svg>
           </div>
           <!-- divide border -->
-           <span class="w-px h-14 bg-gray-300"></span>
+          <span class="w-px h-14 bg-gray-300"></span>
 
-           <!-- login link -->
-          <a href="#" class="flex items-center gap-x-2.5">
+          <!-- login link -->
+          <a href="#" class="flex items-center gap-x-2.5 tracking-1">
             <svg class="w-8 h-8">
               <use xlink:href="#arrow-left"></use>
             </svg>
