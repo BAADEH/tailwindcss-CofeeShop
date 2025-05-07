@@ -73,6 +73,21 @@
           d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
         />
       </symbol>
+      <symbol
+        id="chevron-left"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5 8.25 12l7.5-7.5"
+        />
+      </symbol>
     </svg>
     <header
       class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-24 px-10 py-5 mx-auto bg-black/50 rounded-3xl backdrop-blur-[6px]"
@@ -111,25 +126,48 @@
         </nav>
         <!-- cart & login theme -->
         <div class="flex gap-x-10 text-xl text-orange-200">
-
           <div class="flex items-center gap-x-5">
-            <div class="relative group " >
+            <div class="relative group">
               <div class="py-3">
                 <svg class="w-8 h-8">
                   <use href="#shoping-cart"></use>
                 </svg>
               </div>
               <div
-                class="absolute top-full left-0 opacity-0 invisible group-hover:visible group-hover:opacity-100 text-zinc-700 dark:text-white text-base w-[400px] p-5 bg-white border-t-[3px]  border-t-orange-300 rounded-2xl tracking-1 shadow-normal dark:bg-zinc-700 transition-all"
-              ></div>
+                class="absolute top-full left-0 opacity-0 invisible group-hover:visible group-hover:opacity-100 text-zinc-700 dark:text-white text-base w-[400px] p-5 bg-white border-t-[3px] border-t-orange-300 rounded-2xl tracking-1 shadow-normal dark:bg-zinc-700 transition-all"
+              >
+              <!-- cart header -->
+                <div class="flex items-center justify-between text-xl">
+                  <span class="text-gray-300 text-sm tracking-1 font-bold">1 مورد</span>
+                  <a href="#" class="flex items-center text-orange-200 ">
+                    مشاهده سبد خرید
+                    <svg class="w-5 h-5">
+                      <use href="#chevron-left"></use>
+                    </svg>
+                  </a>
+                </div>
+                <!-- cart body -->
+                 <div>
+                  <img src="images/products/p1.png" alt="قهوه">
+                  <div>
+                    <h3> لورم ایپسوم متن ساختگی</h3>
+                  </div>
+                  <span>14500 تومان تخفیف</span>
+                  <div>
+                    17500
+                    <span>تومان</span>
+                  </div>
+                 </div>
+              </div>
             </div>
-          <div class="cursor-pointer" id="toggle-theme">
-            <svg class="inline-block dark:hidden w-8 h-8">
-              <use href="#moon"></use>
-            </svg>
-            <svg class="hidden dark:inline-block w-8 h-8">
-              <use href="#sun"></use>
-            </svg>
+            <div class="cursor-pointer" id="toggle-theme">
+              <svg class="inline-block dark:hidden w-8 h-8">
+                <use href="#moon"></use>
+              </svg>
+              <svg class="hidden dark:inline-block w-8 h-8">
+                <use href="#sun"></use>
+              </svg>
+            </div>
           </div>
           <!-- divide border -->
           <span class="w-px h-14 bg-gray-300"></span>
