@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="style/main.css" />
     <link rel="icon" href="images/fav-icon.png" />
     <title>cofee shop</title>
+    <script type="text/javascript">
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    </script>
   </head>
   <body class="font-vazir bg-cover bg-gray-100 dark:bg-zinc-800">
     <svg class="hidden">
@@ -82,9 +90,11 @@
               <a href="#" class="text-orange-300">صفحه اصلی</a>
             </li>
             <li class="relative group">
-              <a href="#" class="group-hover:text-orange-300 transition-colors">فروشگاه</a>
+              <a href="#" class="group-hover:text-orange-300 transition-colors"
+                >فروشگاه</a
+              >
               <div
-                class="absolute top-full opacity-0 invisible group-hover:visible group-hover:opacity-100  w-52 p-6 space-y-4 text-zinc-700 dark:text-white text-base bg-white border-t-[3px] rounded-2xl border-t-orange-300 tracking-1 transition-all shadow-normal dark:bg-zinc-700 [&>*]:inline-block [&>*]:transition-colors [&>*:hover]:text-orange-300"
+                class="absolute top-full opacity-0 invisible group-hover:visible group-hover:opacity-100 w-52 p-6 space-y-4 text-zinc-700 dark:text-white text-base bg-white border-t-[3px] rounded-2xl border-t-orange-300 tracking-1 shadow-normal dark:bg-zinc-700 transition-all [&>*]:block [&>*]:transition-colors [&>*:hover]:text-orange-300"
               >
                 <a href="#">قهوه ویژه</a>
                 <a href="#"> ویژه در سطح جهانی</a>
@@ -100,16 +110,25 @@
           </ul>
         </nav>
         <!-- cart & login theme -->
+        <div class="flex gap-x-10 text-xl text-orange-200">
 
-        <div class="flex items-center gap-x-5 text-xl text-orange-200">
-          <div class="text-orange-200">
-            <svg class="w-8 h-8">
-              <use xlink:href="#shoping-cart"></use>
+          <div class="flex items-center gap-x-5">
+            <div class="relative group " >
+              <div class="py-3">
+                <svg class="w-8 h-8">
+                  <use href="#shoping-cart"></use>
+                </svg>
+              </div>
+              <div
+                class="absolute top-full left-0 opacity-0 invisible group-hover:visible group-hover:opacity-100 text-zinc-700 dark:text-white text-base w-[400px] p-5 bg-white border-t-[3px]  border-t-orange-300 rounded-2xl tracking-1 shadow-normal dark:bg-zinc-700 transition-all"
+              ></div>
+            </div>
+          <div class="cursor-pointer" id="toggle-theme">
+            <svg class="inline-block dark:hidden w-8 h-8">
+              <use href="#moon"></use>
             </svg>
-          </div>
-          <div>
-            <svg class="w-8 h-8">
-              <use xlink:href="#moon"></use>
+            <svg class="hidden dark:inline-block w-8 h-8">
+              <use href="#sun"></use>
             </svg>
           </div>
           <!-- divide border -->
